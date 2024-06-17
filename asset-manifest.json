@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a2bd4913.css",
+    "main.js": "./static/js/main.46519c45.js",
+    "static/media/ARIAL.ttf": "./static/media/ARIAL.5afb1f7c7464ace62524.ttf",
+    "static/media/map.jpg": "./static/media/map.bff4136fb5436b393b83.jpg",
+    "static/media/DroidSans-Bold.ttf": "./static/media/DroidSans-Bold.8876c98c7c44c0f44176.ttf",
+    "static/media/DroidSans.ttf": "./static/media/DroidSans.6509cf43581d63eba297.ttf",
+    "static/media/header.jpg": "./static/media/header.751bd50b4eb98f2e9e80.jpg",
+    "static/media/video.jpg": "./static/media/video.fa0cc19d6e8730440d20.jpg",
+    "index.html": "./index.html",
+    "main.a2bd4913.css.map": "./static/css/main.a2bd4913.css.map",
+    "main.46519c45.js.map": "./static/js/main.46519c45.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2bd4913.css",
+    "static/js/main.46519c45.js"
+  ]
+}
