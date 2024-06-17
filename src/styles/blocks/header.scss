@@ -1,0 +1,146 @@
+.header {
+  background-image: url('../../../public/images/header.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 180%;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  @include onTablet {
+    background-size: cover;
+  }
+
+  @include onDesktop {
+    position: sticky;
+  }
+
+  &::after {
+    display: block;
+    background-color: rgb(7, 7, 7);
+    opacity: 0.302;
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+  }
+
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+    @include onTablet {
+      height: 60px;
+    }
+    @include onDesktop {
+      height: 100px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    @extend %link;
+    text-transform: none;
+    font-size: 24px;
+    text-align: center;
+    z-index: 1;
+
+    &:hover {
+      color: inherit;
+    }
+
+    @include onDesktop {
+      font-size: 36px;
+    }
+
+    &-colored {
+      color: $colored;
+    }
+
+    &-img {
+      position: absolute;
+      width: 16px;
+      left: 35px;
+      top: -9px;
+
+      @include onDesktop {
+        width: initial;
+        left: 35%;
+        top: -15px;
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+    z-index: 2;
+    height: 100%;
+
+    @include onDesktop {
+      display: flex;
+    }
+  }
+
+  &__item {
+    margin: 0;
+    position: relative;
+
+    &:hover {
+      color: $colored;
+      transition: $duration;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 13px;
+
+    @extend %link;
+
+    &--current {
+      color: $colored;
+
+      &::after {
+        @extend %linkAfter;
+        display: none;
+
+        @include onDesktop {
+          top: 0;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    z-index: 2;
+    @include onDesktop {
+      display: none;
+    }
+
+    &-img {
+      width: 30px;
+    }
+  }
+}

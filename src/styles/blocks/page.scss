@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: "DroidSans", sans-serif;
+  src: url("../../../public/fonts/DroidSans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DroidSans", sans-serif;
+  src: url("../../../public/fonts/DroidSans-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../public/fonts/ARIAL.ttf") format("truetype");
+}
+
+.page {
+  font-family: "Lato", sans-serif;
+  line-height: 1.2;
+  scroll-behavior: smooth;
+  color: $white;
+  font-weight: 300;
+
+
+  &__body {
+    margin: 0;
+    min-width: 340px;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+
+  &__container {
+    max-width: 1480px;
+    padding: 0 20px;
+
+
+    @include onTablet {
+      padding: 0 80px;
+      margin: 0 auto;
+    }
+
+    @include onDesktop {
+      padding: 0 105px;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include onTablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+
+
+  &__section {
+    padding: 30px 0 45px;
+
+    @include onTablet {
+      padding: 40px 0 60px;
+    }
+
+    @include onDesktop {
+      padding: 50px 0 90px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__mainTitle {
+    margin: 0 0 30px;
+    line-height: 1.2;
+    font-weight: 300;
+
+    @include onTablet {
+      font-size: 48px;
+    }
+
+    @include onDesktop {
+      margin: 0 0 30px;
+      font-size: 48px;
+      line-height: 1.2;
+      font-weight: 300;
+    }
+  }
+
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0 0 20px;
+
+    @include onTablet {
+      font-size: 18px;
+    }
+
+    @include onDesktop {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+    color: $grey;
+
+    margin: 0 0 8px;
+
+    @include onDesktop {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    color: $grey;
+    text-align: center;
+
+    margin: 0 0 30px;
+
+    @include onDesktop {
+      margin: 0 0 70px;
+    }
+  }
+
+  &__headline {
+    font-size: 15px;
+    text-align: center;
+    color: $grey;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+
+    &--colored {
+      color: $colored;
+    }
+  }
+
+  &__p {
+    font-size: 13px;
+    color: $ligthGrey;
+    line-height: 1.692;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.button {
+  font-size: 15px;
+  color: $white;
+  font-weight: bold;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: opacity $duration;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}

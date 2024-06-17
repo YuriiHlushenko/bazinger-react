@@ -1,0 +1,23 @@
+.footer {
+  padding: 50px 0;
+  background-color: $grey;
+  display: block;
+
+  @include onTablet {
+    padding: 36px 0;
+  }
+
+  @include onDesktop {
+    padding: 47px 0 35px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.251);
+  }
+}

@@ -1,0 +1,88 @@
+.video {
+  height: 550px;
+  background-image: url("../../../public/images/video.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 4px solid $white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  @include onDesktop {
+    max-width: initial;
+  }
+
+  &__play {
+    cursor: pointer;
+    transition: all $duration;
+    fill: $white;
+    stroke: $white;
+
+    &:hover {
+      fill: $colored;
+      stroke: $colored;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 670px;
+  }
+
+  &__modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(75, 202, 255, .7);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    transition: opacity .3s ease-in;
+    align-items: flex-start;
+    z-index: 2;
+    opacity: 0;
+
+    &-content {
+      width: 95vw;
+      padding-top: 55%;
+      margin: auto 0;
+      position: relative;
+
+      @include onDesktop {
+        width: 70vw;
+        padding-top: 45%;
+      }
+
+      &>iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__close {
+    color: $black;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: -50px;
+
+    @include onDesktop {
+      right: -70px;
+      top: -50px;
+    }
+  }
+}

@@ -1,4 +1,19 @@
-# Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+# bazinger react landing page
+
+- The design 1440px
+- Desktop 1280px
+- Tablet 640px
+- Mobile (> 320px)
+
+In this project I used React, HTML, SASS/SCSS, BEM,
+UseRef, useEfffect, UseState, IntersectionObserver.
+
+used gulp template
+node v14.21.3
+
+[DEMO LINK](https://bazinger-react.ivbake.zt.ua)
+
+[DEMO LINK](https://yuriihlushenko.github.io/bazinger-react/)
+
+
+

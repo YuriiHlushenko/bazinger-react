@@ -1,45 +1,59 @@
 {
-  "name": "gulp-boilerplate",
-  "version": "1.0.0",
-  "description": "Frontend boilerplate based on gulp",
+  "homepage": ".",
+  "name": "react-typescript-starter-pack",
+  "version": "0.1.0",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "bulma": "^0.9.4",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.6.3",
+    "typescript-eslint-parser": "^22.0.0",
+    "web-vitals": "^1.1.1"
+  },
   "scripts": {
-    "init": "mate-scripts init",
-    "start": "mate-scripts start",
-    "lint": "mate-scripts lint",
-    "test:only": "mate-scripts test",
-    "build": "mate-scripts build",
-    "deploy": "mate-scripts deploy",
-    "update": "mate-scripts update",
-    "postinstall": "npm run update",
-    "test": "npm run lint && npm run test:only"
+    "format": "prettier --write './src/**/*.{ts,tsx}'",
+    "lint": "npm run format && eslint ./src --fix",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "keywords": [],
-  "author": "Mate Academy",
-  "license": "GPL-3.0",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "@linthtml/linthtml": "^0.9.5",
-    "@mate-academy/backstop-config": "^1.0.0",
-    "@mate-academy/bemlint": "^0.1.1",
-    "@mate-academy/eslint-config": "*",
-    "@mate-academy/linthtml-config": "*",
-    "@mate-academy/scripts": "^1.7.0",
-    "@mate-academy/stylelint-config": "^0.0.11",
-    "@parcel/transformer-sass": "2.10.2",
-    "backstopjs": "^6.2.2",
-    "eslint": "^8.52.0",
-    "eslint-plugin-node": "^11.1.0",
-    "jest": "^29.7.0",
-    "parcel": "2.10.2",
-    "stylelint": "^15.11.0"
+    "@mate-academy/eslint-config-react-typescript": "latest",
+    "@mate-academy/students-ts-config": "latest",
+    "@types/node": "^16.18.91",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "eslint": "^7.32.0",
+    "gh-pages": "^6.1.1",
+    "prettier": "^3.2.5",
+    "sass": "^1.77.2"
   },
-  "browserslist": [
-    "last 2 versions"
-  ],
-  "mateAcademy": {
-    "projectType": "layout",
-    "linters": {
-      "bem": false
-    }
-  },
-  "dependencies": {}
+  "browser": {
+    "crypto": false
+  }
 }
